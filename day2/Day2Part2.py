@@ -3,13 +3,13 @@ with open(r"/home/kestrel/Documents/CodingProjects/AdventOfCode2022/day2/data.tx
 
 ''' points:
 
-    Rock: 1 A/X
-    Paper: 2 B/Y
-    Scissors: 3 C/Z
+    Rock: 1 A
+    Paper: 2 B
+    Scissors: 3 C
 
-    win: 6
-    draw: 3
-    lose: 0
+    win: 6 Z
+    draw: 3 Y
+    lose: 0 X
 '''
 
 print('data=', data)
@@ -27,17 +27,17 @@ def rock_paper_scissors(string):
     score = 0
     if string[0] == 'A':
         #opp played Rock
-        if string[2] == 'X':
+        if string[2] == 'Y':
             # hero played Rock
             # draw
             score += 1
             score += 3
-        if string[2] == 'Y':
+        if string[2] == 'Z':
             # hero played Paper
             # win
             score += 2
             score += 6
-        if string[2] == 'Z':
+        if string[2] == 'X':
             # hero played Scissors
             # lose
             score += 3
@@ -61,17 +61,17 @@ def rock_paper_scissors(string):
             score += 6
     if string[0] == 'C':
         #opp played Scissors
-        if string[2] == 'X':
+        if string[2] == 'Z':
             # hero played Rock
             # win
             score += 1
             score += 6
-        if string[2] == 'Y':
+        if string[2] == 'X':
             # hero played Paper
             # lose
             score += 2
             score += 0
-        if string[2] == 'Z':
+        if string[2] == 'Y':
             # hero played Scissors
             # draw
             score += 3
@@ -87,4 +87,3 @@ def get_score(game_results):
     return score
 
 get_score(clean_data)
-
