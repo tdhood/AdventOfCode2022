@@ -1,4 +1,4 @@
-with open(r"/home/kestrel/Documents/CodingProjects/AdventOfCode2022/day1/part1/data.txt") as file:
+with open(r"/home/kestrel/Documents/CodingProjects/AdventOfCode2022/day1/data.txt") as file:
     data = file.readlines()
 
 def clean_data(input):
